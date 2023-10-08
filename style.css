@@ -45,18 +45,22 @@ body {
 }
 
 .bottom-nav {
-    display: flex;
-    justify-content: right;
     flex-flow: column;
-    gap: 3%;
 }
 
-:any-link:hover {
-    background-color: rgb(67, 54, 181);
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    padding: 5px 15px;
-    text-decoration: none;
+.bottom-nav-1 {
+    margin: auto;
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.bottom-nav-2 {
+    display: flex;
+    margin-right: 3%;
+    text-align: right;
+    justify-content: right;
 }
 
 .file-container {
@@ -64,6 +68,7 @@ body {
     align-items: left;
     flex-flow: column;
 }
+
 
 .upload-label {
     margin-left: 20%;
@@ -105,6 +110,14 @@ body {
     justify-self: left;
 }
 
+:any-link:hover {
+    background-color: rgb(67, 54, 181);
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
 .code {
     margin: auto;
     padding-right: 50px;
@@ -118,43 +131,12 @@ body {
     text-align: right;
 }
 
-.bottom-nav-1 {
-    margin: auto;
-    display: flex;
-    gap: 21px;
-    justify-content: right;
-}
-
-.bottom-nav-2 {
-    display: flex;
-    margin-right: 50px;
-    text-align: right;
-    justify-content: right;
-}
-
-.input-search {
-    width: fit-content;
-    height: 50px;}
-
-input.input-box {
-    flex-flow: row;
-    width: 550px;
-    height: 50px;
-    margin-right: 12px;
-    border-radius: 25px;
-    border: 3px none rgb(118, 118, 118);
-    padding: 12px;
-    font-size: large;
-    font-weight: bolder;
-}
-
 button {
     border-radius: 12px;
     padding: 12px 18px;
     height: 50px;
-    background-color: rgb(79, 165, 218);
+    background-color: rgb(116, 79, 218);
     border: none;
-    color: white;
     color: rgb(255, 255, 255);
     font-size: large;
 }
@@ -176,7 +158,7 @@ ul {
 }
 
 *:focus {
-    outline: rgb(202, 83, 139) dashed 2.5px;
+    outline: rgb(191, 43, 112) dashed 2.5px;
     font-weight: 600;
     padding: 3px 15px;
 }
@@ -188,13 +170,13 @@ ul {
 }
 
 *:any-link {
-    color: rgb(42, 147, 89);
+    color: rgb(215, 48, 48);
     font-size: large;
 }
 
 *:any-link:focus {
     color: rgb(255, 255, 255);
-    background-color: rgb(79, 165, 218);
+    background-color: rgb(116, 79, 218);
     border-radius: 21px;
 }
 
