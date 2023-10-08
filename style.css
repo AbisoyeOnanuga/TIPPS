@@ -1,0 +1,211 @@
+/*-- google fonts --*/
+@import url('https://fonts.googleapis.com/css2?family=Dm+Sans:wght@100;200;300;400;600;800&display=swap');
+
+/* Add custom css rules here */
+
+/*-- base style --*/
+*{
+    font-family: 'Dm Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(67, 54, 181);
+  font-weight: 600;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.header-1 {
+    margin-top: 21px;
+    padding-left: 50px;
+    padding-bottom: 21px;
+}
+
+.header-2 {
+    padding-left: 50px;
+    padding-bottom: 12px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.top-nav {
+    font-size: x-large;
+    margin-top: 3%;
+    margin-right: 3%;
+    gap: 3%;
+    display: flex;
+    justify-content: right;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: right;
+    flex-flow: column;
+    gap: 3%;
+}
+
+:any-link:hover {
+    background-color: rgb(67, 54, 181);
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.file-container {
+    display: block;
+    align-items: left;
+    flex-flow: column;
+}
+
+.upload-label {
+    margin-left: 20%;
+    margin-bottom: 20%;
+    align-content: left;
+    text-align: left;
+    justify-self: left;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.file-insert {
+    margin-top: 0.5%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(236, 236, 236);
+    width: 60%;
+    border-radius: 21px;
+    outline-style: dashed;
+    outline-width: 6px;
+    outline-color: rgb(98, 98, 98);;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    vertical-align: middle;
+}
+
+.file-upload {
+    margin-bottom: 2rem;
+}
+
+.app-info {
+    margin-left: 3%;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    align-content: left;
+    text-align: left;
+    justify-self: left;
+}
+
+.code {
+    margin: auto;
+    padding-right: 50px;
+    text-align: right;
+}
+
+.email-contact {
+    margin: auto;
+    padding-right: 50px;
+    padding-top: 12px;
+    text-align: right;
+}
+
+.bottom-nav-1 {
+    margin: auto;
+    display: flex;
+    gap: 21px;
+    justify-content: right;
+}
+
+.bottom-nav-2 {
+    display: flex;
+    margin-right: 50px;
+    text-align: right;
+    justify-content: right;
+}
+
+.input-search {
+    width: fit-content;
+    height: 50px;}
+
+input.input-box {
+    flex-flow: row;
+    width: 550px;
+    height: 50px;
+    margin-right: 12px;
+    border-radius: 25px;
+    border: 3px none rgb(118, 118, 118);
+    padding: 12px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+button {
+    border-radius: 12px;
+    padding: 12px 18px;
+    height: 50px;
+    background-color: rgb(79, 165, 218);
+    border: none;
+    color: white;
+    color: rgb(255, 255, 255);
+    font-size: large;
+}
+
+button:hover {
+    background-color: rgb(67, 54, 181);
+    border-color: rgb(67, 54, 181);
+    padding: 0px 20px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+.copyright {
+    margin-top: 60px;
+    text-align: center;
+}
+
+*:focus {
+    outline: rgb(202, 83, 139) dashed 2.5px;
+    font-weight: 600;
+    padding: 3px 15px;
+}
+
+.input-box:focus {
+    outline: rgb(202, 83, 139) dashed 2.5px;
+    font-weight: 600;
+    padding: 12px;
+}
+
+*:any-link {
+    color: rgb(42, 147, 89);
+    font-size: large;
+}
+
+*:any-link:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(79, 165, 218);
+    border-radius: 21px;
+}
+
+*:any-link:focus:hover {
+    color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    background-color: rgb(67, 54, 181);
+    border-radius: 21px;
+}
+
+button:focus {
+    background-color: rgb(67, 54, 181);
+    border-color: rgb(67, 54, 181);
+}
