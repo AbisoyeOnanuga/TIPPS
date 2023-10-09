@@ -1,0 +1,39 @@
+  {
+    "builds": [
+      {
+        "src": "api/*.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "50mb"
+        }
+      },
+      {
+        "src": "*.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "*.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "*.js",
+        "use": "@vercel/static"
+      }
+    ],
+    "build": {
+      "env": {
+        "PYTHONUSERBASE": "/tmp/python"
+      },
+      "command": "pip install --user -r api/requirements.txt"
+    },
+    "routes": [
+      {
+        "src": "/analyze",
+        "dest": "/api/analyze.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/$1"
+      }
+    ]
+  }
