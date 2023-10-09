@@ -21,13 +21,18 @@
     <main>
         <!-- Add web UI elements here, such as forms, buttons, tables, etc. -->
         <section class="file-container">
-            <section class="upload-position">
-                <label class="upload-label" for="url-input">upload or drop a contract here</label><br>
-                <section class="file-insert">
-                    <input class="file-upload" type="file" name="drop-file-here" id="file-upload" role="document" title="drag and drop contract pdf/doc.x file here">
-                    <button title="click to upload a contract file">Upload contract file</button>
-                </section>
+            <!-- Create the upload area and the file input -->
+            <label class="upload-label" for="url-input">upload or drop a contract here</label><br>
+            <section class="upload-area" id="upload-area">
+                <input type="file" id="file-input" />
+                Drag and drop your file here
             </section>
+
+            <!-- Create the upload button -->
+            <section class="file-insert">
+                <button class="upload-btn" id="upload-btn" title="click to upload a contract file">Upload contract file</button>
+            </section>
+        </section>
             <section class="app-info" title="introduction-to-this-app">
                 <h3>What is TIPPS</h3>
                 <p>How does the TIPPS web app improve the contract agreements and negotiation process</p>
