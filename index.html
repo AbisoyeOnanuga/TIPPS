@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>TIPPS</title>
     <!-- Load custom CSS file -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <!-- Create a container for the web UI elements -->
@@ -32,6 +32,13 @@
             <section class="file-insert">
                 <button class="upload-btn" id="upload-btn" title="click to upload a contract file">Upload contract file</button>
             </section>
+
+            <section class="file-insert" id="container">
+            <h2>Dropbox File Chooser and Saver</h2>
+              <p><input type="button" id="chooser-button" value="Choose from Dropbox"/></p>
+              <p><input type="button" id="saver-button" value="Save to Dropbox" disabled/></p>
+            </section>
+
         </section>
             <section class="app-info" title="introduction-to-this-app">
                 <h3>What is TIPPS</h3>
@@ -43,7 +50,6 @@
         </section>
     </main>
    <br><br>
-
     <footer>
         <nav class="bottom-nav" role="menu">
             <section class="bottom-nav-1">        
@@ -65,6 +71,7 @@
         
     </footer>
     <!-- Load custom JavaScript file -->
-    <script src="app.js"></script>
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key=""></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
