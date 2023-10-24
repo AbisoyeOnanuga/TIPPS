@@ -56,7 +56,7 @@ document.getElementById("db-chooser").addEventListener("click", function() {
         // Specify the file link to embed
         link: fileLink,
         // Specify the container element to display the embedded file
-        element: document.getElementById("file-embedder")
+        element: document.getElementById("embed-container")
       });
     }
   });
