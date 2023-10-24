@@ -61,6 +61,27 @@ document.getElementById("db-chooser").addEventListener("click", function() {
     }
   });
 });
+
+document.getElementById("db-chooser").addEventListener("click", function() {
+  // Invoke the Dropbox Chooser
+  Dropbox.choose({
+    // Specify the file types to show
+    extensions: ['.pdf', '.docx'],
+    // Specify the link type to use
+    linkType: "direct",
+    // Specify the callback function when a file is selected
+    success: function(files) {
+      // Get the first file object from the array
+      var file = files[0];
+      // Get the file link
+      var fileLink = file.link;
+      // Get the anchor element by its id
+      var embedLink = document.getElementById("embed-link");
+      // Set the href attribute of the anchor element to the file link
+      embedLink.setAttribute("href", fileLink);
+    }
+  });
+});
 */
 
 document.getElementById("chooser-button").addEventListener("click", function() {
@@ -99,26 +120,5 @@ document.getElementById("embed-button").addEventListener("click", function() {
     link: fileLink,
     // Specify the container element to display the embedded file
     element: embedDiv
-  });
-});
-
-document.getElementById("db-chooser").addEventListener("click", function() {
-  // Invoke the Dropbox Chooser
-  Dropbox.choose({
-    // Specify the file types to show
-    extensions: ['.pdf', '.docx'],
-    // Specify the link type to use
-    linkType: "direct",
-    // Specify the callback function when a file is selected
-    success: function(files) {
-      // Get the first file object from the array
-      var file = files[0];
-      // Get the file link
-      var fileLink = file.link;
-      // Get the anchor element by its id
-      var embedLink = document.getElementById("embed-link");
-      // Set the href attribute of the anchor element to the file link
-      embedLink.setAttribute("href", fileLink);
-    }
   });
 });
