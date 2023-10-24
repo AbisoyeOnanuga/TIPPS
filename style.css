@@ -63,51 +63,35 @@ body {
     justify-content: right;
 }
 
-.file-container {
-    display: block;
-    align-items: left;
-    flex-flow: column;
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.file-choose {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
 
 .upload-label {
-    margin-left: 20%;
-    margin-bottom: 20%;
+    margin-left: 2.5%;
+    margin-bottom: 2%;
     align-content: left;
     text-align: left;
     justify-self: left;
-    font-size: medium;
-    font-weight: 500;
 }
-
-/*.file-insert {
-    margin-top: 0.5%;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgb(236, 236, 236);
-    width: 60%;
-    border-radius: 21px;
-    outline-style: dashed;
-    outline-width: 6px;
-    outline-color: rgb(98, 98, 98);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    vertical-align: middle;
-}*/
 
 .file-upload {
     margin-bottom: 2rem;
 }
 
-/* Style the upload area */
-.upload-area {
-    margin-top: 0.5%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    height: 200px;
+/* Style the upload button */
+.upload-btn {
+    margin: auto 10%;
     border: 4px #ccc;
     border-radius: 21px;
     outline-style: dashed;
@@ -115,37 +99,45 @@ body {
     outline-color: rgb(98, 98, 98);
     background-color: #f0f0f0;
     text-align: center;
-    font-size: 20px;
     line-height: 200px;
     justify-content: center;
     flex-flow: column;
     vertical-align: middle;
 }
 
-/* Change the style when dragging over */
-.upload-area.dragover {
-    border-color: #00f;
-    background-color: #e0e0ff;
-}
-
-/* Hide the file input */
-.upload-area input {
-    display: none;
-}
-
-/* Style the upload button */
-.upload-btn {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
+.upload-btn:hover {
     background-color: #00f;
     color: #fff;
     border: none;
     cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+/* Style the upload button */
+.save-btn {
+    margin: auto;
+    border: 4px #ccc;
+    border-radius: 21px;
+    outline-style: dashed;
+    outline-width: 6px;
+    outline-color: rgb(98, 98, 98);
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 200px;
+    justify-content: center;
+    flex-flow: column;
+    vertical-align: middle;
+}
+
+.save-btn:hover {
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
 }
 
 input {
-    display: block;
     border-radius: 12px;
     border: 4px rgb(141, 141, 141);
     padding: 12px 18px;
@@ -154,6 +146,8 @@ input {
     margin: 10px auto;
     padding: 10px 20px;
     cursor: pointer;
+    width: 30%;
+    height: 30%;
 }
 
 .app-info {
@@ -213,16 +207,17 @@ ul {
 }
 
 *:focus {
-    outline: rgb(191, 43, 112) dashed 2.5px;
+    outline: rgb(191, 43, 112) dashed 6px;
     font-weight: 600;
     padding: 3px 15px;
 }
 
+/*
 .input-box:focus {
     outline: rgb(202, 83, 139) dashed 2.5px;
     font-weight: 600;
     padding: 12px;
-}
+}*/
 
 *:any-link {
     color: rgb(215, 48, 48);
