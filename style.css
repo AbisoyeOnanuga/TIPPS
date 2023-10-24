@@ -214,7 +214,6 @@ ul {
 input:focus {
     outline: rgb(202, 83, 139) solid 6px;
     font-weight: 600;
-    padding: 12px;
 }
 
 *:any-link {
