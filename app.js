@@ -110,10 +110,8 @@ document.getElementById("embed-button").addEventListener("click", function() {
   var linkInput = document.getElementById("link-input");
   // Get the value of the input element
   var fileLink = linkInput.value;
-  // Get the hidden div element by its id
+  // Get the div element by its id
   var embedDiv = document.getElementById("embed-div");
-  // Change the style of the hidden div element to make it visible
-  embedDiv.style.display = "block";
   // Invoke the Dropbox Embedder
   Dropbox.embed({
     // Specify the file link to embed
