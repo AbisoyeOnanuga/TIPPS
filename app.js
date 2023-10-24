@@ -1,5 +1,5 @@
 // Create a Dropbox Chooser button
-
+/*
 function chooserCallback(files) {
   if (files.length > 0) {
     // Get the first file's link
@@ -33,6 +33,32 @@ button.addEventListener("click", function() {
     cancel: function() {},
     linkType: "direct",
     multiselect: false
+  });
+});
+*/
+
+document.getElementById("db-chooser").addEventListener("click", function() {
+  // Invoke the Dropbox Chooser
+  Dropbox.choose({
+    // Specify the file types to show
+    extensions: ['.pdf', '.docx'],
+    // Specify the link type to use
+    linkType: "direct",
+    // Specify the callback function when a file is selected
+    success: function(files) {
+      // Get the first file object from the array
+      var file = files[0];
+      // Get the file name and link
+      var fileName = file.name;
+      var fileLink = file.link;
+      // Invoke the Dropbox Embedder
+      Dropbox.embed({
+        // Specify the file link to embed
+        link: fileLink,
+        // Specify the container element to display the embedded file
+        element: document.getElementById("file-embedder")
+      });
+    }
   });
 });
 
