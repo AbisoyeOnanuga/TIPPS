@@ -1,10 +1,8 @@
 # app.py
 import os
 import dropbox
-from flask import Flask, request, render_template, jsonify
-from jinja2 import Environment, FileSystemLoader
-
-from werkzeug.utils import secure_filename
+import dropbox_sign
+from flask import Flask, request, render_template
 
 from dotenv import load_dotenv
 
