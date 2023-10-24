@@ -1,16 +1,39 @@
 // Create a Dropbox Chooser button
 
-function 
-chooseFile() 
-{ 
-  Dropbox.choose({ success: function(files) { // this is the same callback function as before 
-    var file = files[0]; 
-    var link = file.link; 
-  }}); 
+function chooserCallback(files) {
+  if (files.length > 0) {
+    // Get the first file's link
+    var link = files[0].link;
+    // Create an options object for embedding
+    var options = {
+      link: link,
+      file: {
+        zoom: "best"
+      },
+      folder: {
+        view: "list",
+        headerSize: "normal"
+      }
+    };
+    // Get the element where you want to embed the file
+    var element = document.getElementById("file-embedder").style.display = "block";
+    // Call the embed function with the options and element
+    Dropbox.embed(options, element);
+  }
 }
 
-document.getElementById("file-embedder").style.display = "block"; // show the iframe element 
-Dropbox.embed(link, document.getElementById('file-embedder')); // invoke the Dropbox Embedder with the link and the iframe element
+// Get the button element by its id
+var button = document.getElementById("db-chooser");
+// Add a click event listener to the button
+button.addEventListener("click", function() {
+  // Call the choose function with an options object and a callback function
+  Dropbox.choose({
+    success: chooserCallback,
+    cancel: function() {},
+    linkType: "preview",
+    multiselect: false
+  });
+});
 
 document.getElementById("db-sign").addEventListener("DbxSignSuccess", 
 function(e) 
