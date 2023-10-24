@@ -18,26 +18,18 @@
             <a href="#contact-support" role="link" title="contact-support">Contact</a>
         </nav><br><br>
     </header>
+
     <main>
         <!-- Add web UI elements here, such as forms, buttons, tables, etc. -->
-        <section class="file-container">
+        <section class="file-upload">
             <!-- Create the upload area and the file input -->
-            <label class="upload-label" for="url-input">upload or drop a contract here</label><br>
-            <section class="upload-area" id="upload-area">
-                <input type="file" id="file-input" />
-                Drag and drop your file here
+            <label class="upload-label"><h2 class="upload-label">Choose, sign and save Dropbox file</h2></label><br>
+            <!-- upload with dropbox -->
+            <section class="file-choose" id="container">
+                    <input class="upload-btn" type="button" id="db-chooser" value="Choose from Dropbox"/>
+                    <input class="save-btn" type="button" id="db-saver" value="Save to Dropbox" disabled/>
             </section>
-
-            <!-- Create the upload button -->
-            <section class="file-insert">
-                <button class="upload-btn" id="upload-btn" title="click to upload a contract file">Upload contract file</button>
-            </section>
-
-            <section class="file-insert" id="container">
-            <h2>Dropbox File Chooser and Saver</h2>
-              <p><input type="button" id="chooser-button" value="Choose from Dropbox"/></p>
-              <p><input type="button" id="saver-button" value="Save to Dropbox" disabled/></p>
-            </section>
+        </section>
 
         </section>
             <section class="app-info" title="introduction-to-this-app">
@@ -49,6 +41,7 @@
         <section role="presentation">
         </section>
     </main>
+
    <br><br>
     <footer>
         <nav class="bottom-nav" role="menu">
@@ -70,8 +63,9 @@
         <p class="copyright"><small>Copyright © 2023 TIPPS</small></p>
         
     </footer>
+
     <!-- Load custom JavaScript file -->
-    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key=""></script>
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="YOUR_APP_KEY"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
