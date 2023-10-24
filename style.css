@@ -90,6 +90,10 @@ body {
     margin-bottom: 2rem;
 }
 
+iframe {
+    margin: auto;
+}
+
 /* Style the upload button */
 button {
     font-size:large;
