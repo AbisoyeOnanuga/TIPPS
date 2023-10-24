@@ -1,52 +1,18 @@
-Dropbox.choose(options);
-
 // Create a Dropbox Chooser button
-var chooserOptions = {
-  success: function(files) {
-    // Enable the saver and download buttons
-    document.getElementById("saver-button").disabled = false;
-    document.getElementById("download-button").disabled = false;
-    // Save the file link, name, and size
-    document.getElementById("saver-button").dataset.link = files[0].link;
-    document.getElementById("saver-button").dataset.name = files[0].name;
-    document.getElementById("saver-button").dataset.size = files[0].bytes;
-    document.getElementById("download-button").dataset.link = files[0].link;
-    alert("Here's the file link: " + files[0].link);
-  },
-  cancel: function() {
-    // Disable the saver and download buttons
-    document.getElementById("saver-button").disabled = true;
-    document.getElementById("download-button").disabled = true;
-  },
-  linkType: "direct", // or "preview"
-  multiselect: false, // or true
-};
-var chooserButton = Dropbox.createChooseButton(chooserOptions);
-document.getElementById("container").appendChild(chooserButton);
+document.getElementById("db-chooser").addEventListener("DbxChooserSuccess", 
+function(e) 
+{ // e.files contains an array of file objects for each selected file 
+  var file = e.files[0]; // get the first file 
+  var link = file.link; // get the direct link to the file 
+  document.getElementById("file-embedder").style.display = "block"; // show the iframe element 
+  Dropbox.embed(link, document.getElementById('file-embedder')); // invoke the Dropbox Embedder with the link and the iframe element 
+});
 
-// Create a Dropbox Saver button
-var saverButton = document.getElementById("saver-button");
-saverButton.addEventListener("click", function() {
-// Get the file link, name, and size from the dataset
-var link = saverButton.dataset.link;
-var name = saverButton.dataset.name;
-var size = saverButton.dataset.size;
-// Create a saver options object
-var saverOptions = {
-  files: [
-    {
-      url: link,
-      filename: name,
-      size: size,
-    },
-  ],
-  success: function() {
-    alert("File saved to Dropbox.");
-  },
-  progress: function(progress) {},
-  cancel: function() {},
-  error: function(errorMessage) {},
-};
-// Trigger the saver
-Dropbox.save(saverOptions);
+document.getElementById("db-sign").addEventListener("DbxSignSuccess", 
+function(e) 
+{ // e.file contains an object with information about the signed file 
+  var file = e.file; // get the signed file 
+  var link = file.link; // get the link to the signed file 
+  var name = file.name; // get the name of the signed file 
+  Dropbox.save(link, name); // invoke the Dropbox Saver to save the signed file back to Dropbox 
 });
