@@ -31,7 +31,7 @@ button.addEventListener("click", function() {
   Dropbox.choose({
     success: chooserCallback,
     cancel: function() {},
-    linkType: "preview",
+    linkType: "direct",
     multiselect: false
   });
 });
