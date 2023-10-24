@@ -26,14 +26,18 @@
             <label class="upload-label"><h2 class="upload-label">Choose, sign and save Dropbox file</h2></label><br>
             <!-- upload with dropbox -->
             <section class="file-choose" id="container">
-                    <button class="upload-btn" type="button" id="db-chooser" title="choose an agreement file from dropbox">Choose<br>from<br>Dropbox</button>
-                    <button class="save-btn" type="button" id="db-sign" title="sign and save agreement file to dropbox" onclick="signFile()" disabled>Sign<br>to<br>Dropbox</button>
+                <button class="upload-btn" type="button" id="chooser-button" title="choose an agreement file from dropbox">Choose<br>from<br>Dropbox</button>
+                <button class="save-btn" type="button" id="db-sign" title="sign and save agreement file to dropbox" onclick="signFile()" disabled>Sign<br>to<br>Dropbox</button>
             </section>
+            <form id="embed-form">
+                <input id="link-input" type="text" readonly>
+                <button class="embed" id="embed-button" type="button" title="choose an agreement file from dropbox">Get File</button>
+            </form>
         </section>
-        
+
         <section role="presentation">
-            <div id="embed-container" aria-label="A PDF or Word file about a license agreement"></div><br>
-            <a href="https://www.dropbox.com/scl/fi/hj7gady0op1heiu7mghr7/SAMPLE-INTELLECTUAL-PROPERTY-LICENSE-AGREEMENT.pdf?rlkey=pb38wyjqx8ajpmq7zq6oips35&dl=0" id="embed-link" class="dropbox-embed"></a>
+            <div id="embed-container" aria-label="A PDF or Word file about a license agreement"></div>
+            <a id="embed-link" class="dropbox-embed"></a>
         </section>
 
         <section>

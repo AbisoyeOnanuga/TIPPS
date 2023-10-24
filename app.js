@@ -82,3 +82,42 @@ document.getElementById("db-chooser").addEventListener("click", function() {
     }
   });
 });
+
+document.getElementById("chooser-button").addEventListener("click", function() {
+  // Invoke the Dropbox Chooser
+  Dropbox.choose({
+    // Specify the file types to show
+    extensions: ['.pdf', '.docx'],
+    // Specify the link type to use
+    linkType: "direct",
+    // Specify the callback function when a file is selected
+    success: function(files) {
+      // Get the first file object from the array
+      var file = files[0];
+      // Get the file link
+      var fileLink = file.link;
+      // Get the input element by its id
+      var linkInput = document.getElementById("link-input");
+      // Set the value of the input element to the file link
+      linkInput.value = fileLink;
+    }
+  });
+});
+
+document.getElementById("embed-button").addEventListener("click", function() {
+  // Get the input element by its id
+  var linkInput = document.getElementById("link-input");
+  // Get the value of the input element
+  var fileLink = linkInput.value;
+  // Create a div element dynamically
+  var embedDiv = document.createElement("div");
+  // Append it to the form element
+  document.getElementById("embed-form").appendChild(embedDiv);
+  // Invoke the Dropbox Embedder
+  Dropbox.embed({
+    // Specify the file link to embed
+    link: fileLink,
+    // Specify the container element to display the embedded file
+    element: embedDiv
+  });
+});

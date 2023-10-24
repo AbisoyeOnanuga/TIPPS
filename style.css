@@ -94,9 +94,19 @@ iframe {
     margin: auto;
 }
 
+form {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    margin:  2% auto;
+    gap: 2%;
+    width: 100%;
+}
+
 /* Style the upload button */
 button {
-    font-size:large;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -121,6 +131,39 @@ button:hover {
     border: none;
     cursor: pointer;
     transition-duration: 0.4s;
+}
+
+button:active {
+    transition: none;
+}
+
+
+.embed {
+    border-radius: 50px;
+    width: 20%;
+    height: 100px;
+    font-size: xx-large;
+    line-height: 1.2;
+    border: 4px rgb(141, 141, 141);
+    outline-style: dashed;
+    outline-width: 6px;
+    outline-color: rgb(98, 98, 98);
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 50px;
+    width: 50%;
+    height: 100px;
+    font-size: xx-large;
+    line-height: 1.2;
+    border: 4px rgb(141, 141, 141);
+    outline-style: solid;
+    outline-width: 6px;
+    outline-color: rgb(98, 98, 98);
+    background-color: #ffffff;
+    cursor: pointer;
 }
 
 .app-info {
@@ -168,12 +211,11 @@ ul {
     padding: 3px 15px;
 }
 
-/*
-.input-box:focus {
-    outline: rgb(202, 83, 139) dashed 2.5px;
+input:focus {
+    outline: rgb(202, 83, 139) solid 6px;
     font-weight: 600;
     padding: 12px;
-}*/
+}
 
 *:any-link {
     color: rgb(215, 48, 48);
