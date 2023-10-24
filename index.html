@@ -26,19 +26,20 @@
             <label class="upload-label"><h2 class="upload-label">Choose, sign and save Dropbox file</h2></label><br>
             <!-- upload with dropbox -->
             <section class="file-choose" id="container">
-                    <input class="upload-btn" type="button" id="db-chooser" value="Choose from Dropbox"/>
-                    <input class="save-btn" type="button" id="db-saver" value="Save to Dropbox" disabled/>
+                    <button class="upload-btn" type="button" id="db-chooser" title="choose an agreement file from dropbox" onclick="chooseFile()">Choose<br>from<br>Dropbox</button>
+                    <button class="save-btn" type="button" id="db-sign" title="sign and save agreement file to dropbox" onclick="signFile()" disabled>Sign<br>to<br>Dropbox</button>
             </section>
         </section>
-
+        
+        <section role="presentation">
+            <iframe id="file-embedder" width="600" height="500" style="display: none;"></iframe>
         </section>
+
+        <section>
             <section class="app-info" title="introduction-to-this-app">
                 <h3>What is TIPPS</h3>
                 <p>How does the TIPPS web app improve the contract agreements and negotiation process</p>
             </section>
-        </section>
-
-        <section role="presentation">
         </section>
     </main>
 
@@ -65,7 +66,7 @@
     </footer>
 
     <!-- Load custom JavaScript file -->
-    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="YOUR_APP_KEY"></script>
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="2a70xzl6pn6uz4i"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
 </html>

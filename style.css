@@ -74,6 +74,7 @@ body {
     flex-direction: row;
     justify-content: center;
     margin: auto;
+    gap: 5%;
     width: 100%;
 }
 
@@ -90,64 +91,32 @@ body {
 }
 
 /* Style the upload button */
-.upload-btn {
-    margin: auto 10%;
-    border: 4px #ccc;
-    border-radius: 21px;
-    outline-style: dashed;
-    outline-width: 6px;
-    outline-color: rgb(98, 98, 98);
-    background-color: #f0f0f0;
+button {
+    font-size:large;
     text-align: center;
-    line-height: 200px;
+    align-items: center;
     justify-content: center;
-    flex-flow: column;
-    vertical-align: middle;
-}
-
-.upload-btn:hover {
-    background-color: #00f;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition-duration: 0.4s;
-}
-
-/* Style the upload button */
-.save-btn {
-    margin: auto;
-    border: 4px #ccc;
-    border-radius: 21px;
-    outline-style: dashed;
-    outline-width: 6px;
-    outline-color: rgb(98, 98, 98);
-    background-color: #f0f0f0;
-    text-align: center;
-    line-height: 200px;
-    justify-content: center;
-    flex-flow: column;
-    vertical-align: middle;
-}
-
-.save-btn:hover {
-    background-color: #00f;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition-duration: 0.4s;
-}
-
-input {
-    border-radius: 12px;
+    align-content: center;
+    display: table-caption;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    font-size: xx-large;
+    line-height: 1.2;
     border: 4px rgb(141, 141, 141);
-    padding: 12px 18px;
-    height: 50px;
-    font-size: large;
-    margin: 10px auto;
-    padding: 10px 20px;
+    outline-style: dashed;
+    outline-width: 6px;
+    outline-color: rgb(98, 98, 98);
+    background-color: #f0f0f0;
     cursor: pointer;
-    width: 30%;
-    height: 30%;
+}
+
+button:hover {
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
 }
 
 .app-info {
@@ -178,23 +147,6 @@ input {
     padding-right: 50px;
     padding-top: 12px;
     text-align: right;
-}
-
-button {
-    border-radius: 12px;
-    padding: 12px 18px;
-    height: 50px;
-    background-color: rgb(116, 79, 218);
-    border: none;
-    color: rgb(255, 255, 255);
-    font-size: large;
-}
-
-button:hover {
-    background-color: rgb(67, 54, 181);
-    border-color: rgb(67, 54, 181);
-    padding: 0px 20px;
-    font-weight: bold;
 }
 
 ul {
@@ -235,9 +187,4 @@ ul {
     padding: 5px 20px;
     background-color: rgb(67, 54, 181);
     border-radius: 21px;
-}
-
-button:focus {
-    background-color: rgb(67, 54, 181);
-    border-color: rgb(67, 54, 181);
 }
