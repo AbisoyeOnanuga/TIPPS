@@ -62,11 +62,23 @@ document.getElementById("db-chooser").addEventListener("click", function() {
   });
 });
 
-document.getElementById("db-sign").addEventListener("DbxSignSuccess", 
-function(e) 
-{ // e.file contains an object with information about the signed file 
-  var file = e.file; // get the signed file 
-  var link = file.link; // get the link to the signed file 
-  var name = file.name; // get the name of the signed file 
-  Dropbox.save(link, name); // invoke the Dropbox Saver to save the signed file back to Dropbox 
+document.getElementById("db-chooser").addEventListener("click", function() {
+  // Invoke the Dropbox Chooser
+  Dropbox.choose({
+    // Specify the file types to show
+    extensions: ['.pdf', '.docx'],
+    // Specify the link type to use
+    linkType: "direct",
+    // Specify the callback function when a file is selected
+    success: function(files) {
+      // Get the first file object from the array
+      var file = files[0];
+      // Get the file link
+      var fileLink = file.link;
+      // Get the anchor element by its id
+      var embedLink = document.getElementById("embed-link");
+      // Set the href attribute of the anchor element to the file link
+      embedLink.setAttribute("href", fileLink);
+    }
+  });
 });
