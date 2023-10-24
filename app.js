@@ -16,7 +16,8 @@ function chooserCallback(files) {
       }
     };
     // Get the element where you want to embed the file
-    var element = document.getElementById("file-embedder").style.display = "block";
+    var element = document.getElementById("file-embedder");
+    element.style.display = "block";
     // Call the embed function with the options and element
     Dropbox.embed(options, element);
   }
@@ -30,7 +31,7 @@ button.addEventListener("click", function() {
   Dropbox.choose({
     success: chooserCallback,
     cancel: function() {},
-    linkType: "preview",
+    linkType: "direct",
     multiselect: false
   });
 });
