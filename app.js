@@ -6,10 +6,11 @@ chooseFile()
   Dropbox.choose({ success: function(files) { // this is the same callback function as before 
     var file = files[0]; 
     var link = file.link; 
-    document.getElementById("file-embedder").style.display = "block"; // show the iframe element 
-    Dropbox.embed(link, document.getElementById('file-embedder')); // invoke the Dropbox Embedder with the link and the iframe element
   }}); 
 }
+
+document.getElementById("file-embedder").style.display = "block"; // show the iframe element 
+Dropbox.embed(link, document.getElementById('file-embedder')); // invoke the Dropbox Embedder with the link and the iframe element
 
 document.getElementById("db-sign").addEventListener("DbxSignSuccess", 
 function(e) 
