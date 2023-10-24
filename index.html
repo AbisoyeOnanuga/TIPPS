@@ -31,12 +31,13 @@
             </section>
             <form id="embed-form">
                 <input id="link-input" type="text" readonly>
-                <button class="embed" id="embed-button" type="button" title="choose an agreement file from dropbox">Get File</button>
+                <button class="embed" id="embed-button" type="button" title="present the chosen agreement file from dropbox">Display File</button>
             </form>
         </section>
 
         <section role="presentation">
-            <div id="embed-container" aria-label="A PDF or Word file about a license agreement"></div>
+            <div id="embed-d" aria-label="A PDF or Word file about a license agreement"></div>
+            <div id="embed-div" aria-label="A PDF or Word file about a license agreement" style="display: none;"></div>
             <a id="embed-link" class="dropbox-embed"></a>
         </section>
 
