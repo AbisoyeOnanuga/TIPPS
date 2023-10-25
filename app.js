@@ -39,5 +39,6 @@ function handleDropboxResult(files) {
     iframe.style.display = "block"; // make the iframe element take up space in the layout
     var fileName = file.name; // get the file name
     iframe.setAttribute('data-file-name', fileName); // set a custom attribute with the file name on the iframe element
+    iframe.innerHTML = "<p>" + fileName + "</p>"; // set the innerHTML of the object element to a paragraph with the file name as fallback content
   }
 }
