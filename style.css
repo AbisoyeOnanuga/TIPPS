@@ -92,7 +92,24 @@ body {
 
 iframe {
     margin: auto;
+    visibility: hidden;
+    display: none; /* make the iframe element take up no space in the layout */
+    width: 800px;
+    height: 900px;
+    border-radius: 21px;
+
 }
+
+iframe::before {
+    content: attr(data-file-name); /* use the custom attribute as the content */
+    background-color: white;
+    color: rgb(67, 54, 181);
+    font-size: large;
+    padding: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }  
 
 form {
     text-align: center;
@@ -137,7 +154,6 @@ button:active {
     transition: none;
 }
 
-
 .embed {
     border-radius: 50px;
     width: 20%;
@@ -151,7 +167,7 @@ button:active {
     background-color: #f0f0f0;
     cursor: pointer;
 }
-
+/*
 input {
     border-radius: 50px;
     width: 50%;
@@ -165,7 +181,7 @@ input {
     background-color: #ffffff;
     cursor: pointer;
 }
-
+*/
 .app-info {
     margin-left: 3%;
     margin-bottom: 2%;
@@ -210,12 +226,12 @@ ul {
     font-weight: 600;
     padding: 3px 15px;
 }
-
+/*
 input:focus {
     outline: rgb(202, 83, 139) solid 6px;
     font-weight: 600;
 }
-
+*/
 *:any-link {
     color: rgb(215, 48, 48);
     font-size: large;
