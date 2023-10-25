@@ -122,6 +122,14 @@ document.getElementById("embed-button").addEventListener("click", function() {
 });
 */
 
+// Load the Dropbox Chooser script
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://www.dropbox.com/static/api/2/dropins.js';
+script.id = 'dropboxjs';
+script.setAttribute('data-app-key', '2585oqjb1y2unzo'); // replace with your own app key from Dropbox
+document.head.appendChild(script);
+
 // Handle the result from Dropbox Chooser
 function handleDropboxResult(files) {
   if (files.length > 0) {
