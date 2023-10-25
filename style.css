@@ -218,7 +218,10 @@ input {
 
 ul {
     list-style: none;
-    gap: 3%;
+}
+
+li {
+    padding: 5px;
 }
 
 .copyright {
