@@ -35,8 +35,8 @@ button.addEventListener("click", function() {
     multiselect: false
   });
 });
-*/
-/*
+
+
 document.getElementById("db-chooser").addEventListener("click", function() {
   // Invoke the Dropbox Chooser
   Dropbox.choose({

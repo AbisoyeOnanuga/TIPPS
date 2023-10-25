@@ -30,15 +30,10 @@
                 <button class="save-btn" type="button" id="db-sign" title="sign and save agreement file to dropbox" onclick="signFile()" disabled>Sign<br>to<br>Dropbox</button>
             </section>
             <form id="embed-form">
-                <input id="link-input" type="text" readonly>
-                <button class="embed" id="embed-button" type="button" title="present the chosen agreement file from dropbox">Display File</button>
+                <div id="embed-div" width="80%" height="60%" aria-label="A PDF or Word file about a license agreement" style="display: none;"></div>
             </form>
         </section>
 
-        <section role="presentation">
-            <iframe id="embed-div" width="80%" height="60%" aria-label="A PDF or Word file about a license agreement"></iframe>
-            <div id="embed-div" aria-label="A PDF or Word file about a license agreement"></div>
-        </section>
 
         <section>
             <section class="app-info" title="introduction-to-this-app">
