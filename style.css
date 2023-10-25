@@ -97,7 +97,8 @@ iframe {
     width: 800px;
     height: 900px;
     border-radius: 21px;
-
+    border-color: rgb(98, 98, 98);
+    border-width: 3px;
 }
 
 iframe::before {
@@ -109,7 +110,7 @@ iframe::before {
     position: absolute;
     top: 0;
     left: 0;
-  }  
+}  
 
 form {
     text-align: center;
