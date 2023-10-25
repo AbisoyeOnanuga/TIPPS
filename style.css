@@ -105,14 +105,15 @@ iframe {
 }
 
 iframe::before {
+    content: "Your Dropbox Document";
     background-color: white;
-    color: rgb(67, 54, 181);
+    color: #00f;
     font-size: large;
     padding: 12px;
     position: absolute;
     top: 0;
     left: 0;
-}  
+  }  
 
 form {
     text-align: center;
@@ -217,6 +218,7 @@ input {
 
 ul {
     list-style: none;
+    gap: 3%;
 }
 
 .copyright {
