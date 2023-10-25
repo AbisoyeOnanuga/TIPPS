@@ -82,7 +82,7 @@ document.getElementById("db-chooser").addEventListener("click", function() {
     }
   });
 });
-*/
+
 
 document.getElementById("chooser-button").addEventListener("click", function() {
   // Invoke the Dropbox Chooser
@@ -118,5 +118,25 @@ document.getElementById("embed-button").addEventListener("click", function() {
     link: fileLink,
     // Specify the container element to display the embedded file
     element: embedDiv
+  });
+});
+*/
+
+// Handle the result from Dropbox Chooser
+function handleDropboxResult(files) {
+  if (files.length > 0) {
+    var file = files[0]; // get the first file
+    var link = file.link; // get the direct link to the file
+    var url = 'https://docs.google.com/gview?url='+link+'&embedded=true'; // create a URL for the Google Docs Viewer
+    document.getElementById("embed-div").src = url; // set the src attribute of the iframe element with id "file-viewer" to the viewer URL
+  }
+}
+
+// Launch the Dropbox Chooser when the button is clicked
+document.getElementById("chooser-button").addEventListener("click", function() {
+  Dropbox.choose({
+    success: handleDropboxResult,
+    linkType: 'direct',
+    multiselect: false,
   });
 });
