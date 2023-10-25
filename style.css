@@ -95,14 +95,16 @@ iframe {
     visibility: hidden;
     display: none; /* make the iframe element take up no space in the layout */
     width: 800px;
-    height: 900px;
+    height: 600px;
     border-radius: 21px;
-    border-color: rgb(98, 98, 98);
+    /*border-color: rgb(98, 98, 98);*/
     border-width: 3px;
+    border-style: solid;
+    border-color: orangered;
+    border-width: 5px;
 }
 
 iframe::before {
-    content: attr(data-file-name); /* use the custom attribute as the content */
     background-color: white;
     color: rgb(67, 54, 181);
     font-size: large;
