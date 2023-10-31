@@ -11,6 +11,5 @@ data/
 *.pdf
 *.json
 *.story
-data/cnnarticles.json
-data/agreements.txt
-data/stories/*.story
+cnnarticles.json
+agreements.txt
