@@ -7,3 +7,10 @@ text_content.txt
 data.txt
 summary.txt
 data/
+*.docx
+*.pdf
+*.json
+*.story
+data/cnnarticles.json
+data/agreements.txt
+data/stories/*.story
