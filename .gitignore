@@ -6,6 +6,4 @@ glossary_text.txt
 text_content.txt
 data.txt
 summary.txt
-data/stories/
-.story
-.json
+data/
